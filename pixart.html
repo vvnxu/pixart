@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+	<script>
+		// Commit 1 ,2,6
+	var input=$('<input>')
+	var $button=$('<button>')
+	var $box=$('<div>')
+	var value=input.val()
+	$button.text('Set Color')
+	$('body').append(input)
+	$('body').append($button)
+	$('body').append($box)
+	$button.on(//'click',
+		'mouseover',function(){
+    $box.css("background-color", value)
+	})
+	$button.on('keypress',function(){
+    $box.css("background-color", value)
+	})
+	
+	// commit 3,4,5
+	for (var i=0;i<100;i++){
+		var div=$("<div class='square'>")
+		div.css('width','20px').css('height','20px')
+		$('body').append(div)
+		$(".square").on('click',function(event){
+			$event.target.css('background-color',value)
+		})
+	}
+
+	//commit 7
+// Add a new tool to your program, the 'stamp' tool.
+// The user should be able to pick either the paint tool (the one you already built in previous steps), or the new stamp tool.
+// For the stamp tool add an input field, allow the user to enter a movie title. Then use AJAX to fetch the poster url of that movie using the omdb api and use that as the stamp. A bit like the image shown below.
+var stamp =$("<input placeholder='Enter Movie name'>")
+var btn=$("<button>")
+</script>
+</body>
+</html>
