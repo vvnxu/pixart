@@ -38,10 +38,8 @@
 		$(".square").on('click',function(event){
 			$event.target.css('background-color',value)
 		})
-	/commit 7
-// Add a new tool to your program, the 'stamp' tool.
-// The user should be able to pick either the paint tool (the one you already built in previous steps), or the new stamp tool.
-// For the stamp tool add an input field, allow the user to enter a movie title. Then use AJAX to fetch the poster url of that movie using the omdb api and use that as the stamp. A bit like the image shown below.
+	//commit 7
+
 var $stamp =$("<input placeholder='Enter Movie name'>")
 function getPic(){
 	options.url = "http://www.omdbapi.com/?apikey=2f6435d9&t=" + $stamp.val()
@@ -51,7 +49,7 @@ function getPic(){
 
 	})
 }
-$("<button id='movie'>").on('click',function(){
+$("<button id='movie'>").on('click',getPic
 	
 })
 
