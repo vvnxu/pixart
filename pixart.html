@@ -17,17 +17,17 @@
 	var input=$('<input>')
 	var $button=$('<button>')
 	var $box=$('<div>')
-	var value=input.val()
+	
 	$button.text('Set Color')
 	$('body').append(input)
 	$('body').append($button)
 	$('body').append($box)
 	$button.on(//'click',
 		'mouseover',function(){
-    $box.css("background-color", value)
+    $box.css("background-color", input.val())
 	})
 	$button.on('keypress',function(){
-    $box.css("background-color", value)
+    $box.css("background-color", input.val())
 	})
 	
 	// commit 3,4,5
@@ -45,11 +45,11 @@ function getPic(){
 	options.url = "http://www.omdbapi.com/?apikey=2f6435d9&t=" + $stamp.val()
 	$.ajax(options).done(function(res){
 		var imgUrl=res.Search.Poster
-		$('.square').css("background-image", "url(imgUrl)")
+		$('.square').css("background-image", "url(" + imgUrl+")")
 
 	})
 }
-$("<button id='movie'>").on('click',getPic()
+$("<button id='movie'>").on('click',getPic
 	
 })
 
