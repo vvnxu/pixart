@@ -22,8 +22,8 @@
 	$('body').append(input)
 	$('body').append($button)
 	$('body').append($box)
-	$button.on(//'click',
-		'mouseover',function(){
+	$button.on('click',
+		,function(){
     $box.css("background-color", input.val())
 	})
 	$button.on('keypress',function(){
@@ -36,7 +36,7 @@
 		div.css('width','20px').css('height','20px')
 		$('body').append(div)
 		$(".square").on('click',function(event){
-			$event.target.css('background-color',value)
+			$event.target.css('background-color',input.val())
 		})
 	//commit 7
 
